@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUserDetails } from '../services/authService';
 import { setUserDetails } from '../redux/authSlice';
 import Swal from 'sweetalert2';
+import MantineTable from './MantineTable.jsx'
+
 
 const DashboardPage = () => {
   const username = useSelector((state) => state.auth.username);
@@ -25,6 +27,7 @@ const DashboardPage = () => {
 
   return (
     <div className="login-container">
+      <MantineTable />
             <div className="login-card">
       <h2>Dashboard</h2>
       <p>Username: {username}</p>
